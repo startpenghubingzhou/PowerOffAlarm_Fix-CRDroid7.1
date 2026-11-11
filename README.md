@@ -19,7 +19,7 @@ Run `make` to build.
 
 ## License
 
-This module observe MIT license.
+This module observe [MIT](https://github.com/startpenghubingzhou/PowerOffAlarm_Fix-CRDroid7.1/blob/main/LICENSE) license.
 
 ## Acknowlegement
 

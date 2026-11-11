@@ -14,7 +14,7 @@
 ## 如何构建？
 运行`make`命令进行构建。
 ## 许可证
-此模块遵循MIT许可协议。
+此模块遵循[MIT](https://github.com/startpenghubingzhou/PowerOffAlarm_Fix-CRDroid7.1/blob/main/LICENSE) 许可协议。
 ## 致谢
 [@startpenghubingzhou](https://github.com/startpenghubingzhou/) 编写此模块
 [@deepseek-ai](https://github.com/deepseek-ai/)  开发的DeepSeek
