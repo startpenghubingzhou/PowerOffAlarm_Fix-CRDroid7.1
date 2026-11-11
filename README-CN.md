@@ -1,7 +1,5 @@
 # PowerOffAlarm_Fix-CRDroid7.1
-English|简体中文
-
-
+[English](https://github.com/startpenghubingzhou/PowerOffAlarm_Fix-CRDroid7.1)|[简体中文](https://github.com/startpenghubingzhou/PowerOffAlarm_Fix-CRDroid7.1/blob/main/README-CN.md)
 
 ## 这是什么？
 
