@@ -1,0 +1,30 @@
+# Define rule scope
+type poweroffalarm_app, domain;
+app_domain(poweroffalarm_app);
+
+# Get parent directory access
+allow poweroffalarm_app mnt_vendor_file dir { open read search getattr };
+
+# Get access to the core data files
+allow poweroffalarm_app persist_alarm_file dir { open read write search add_name remove_name getattr setattr };
+allow poweroffalarm_app persist_alarm_file file { open read write create getattr setattr unlink rename };
+
+# Get access to the data directory
+allow poweroffalarm_app system_app_data_file dir { open read write search add_name remove_name create getattr setattr };
+allow poweroffalarm_app system_app_data_file file { open read write create getattr setattr unlink rename };
+allow poweroffalarm_app system_app_data_file lnk_file { open read write create getattr setattr unlink rename };
+
+# Get access to the alarm clock HAL
+allow poweroffalarm_app hal_alarm_qti_hwservice hwservice_manager find;
+allow poweroffalarm_app hwservicemanager_prop file { open read getattr };
+allow poweroffalarm_app hal_alarm_qti_default binder { call transfer };
+allow poweroffalarm_app hal_alarm_qti_default fd use;
+
+# Obtain access to the system services
+allow poweroffalarm_app app_api_service service_manager find;
+allow poweroffalarm_app surfaceflinger_service service_manager find;
+allow poweroffalarm_app audioserver_service service_manager find;
+allow poweroffalarm_app mediaserver_service service_manager find;
+
+# Read the alarm clock properties when it starts
+allow poweroffalarm_app vendor_alarm_boot_prop file { getattr read open map };
