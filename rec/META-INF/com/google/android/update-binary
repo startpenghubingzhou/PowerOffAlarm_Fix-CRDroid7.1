@@ -1,8 +1,4 @@
 #!/sbin/sh
-#
-# 自包含 update-binary for TWRP
-# 调用: update-binary <api_version> <outfd> <zipfile>
-#
 
 OUTFD=$2
 ZIPFILE=$3
@@ -55,7 +51,7 @@ if [ ! -f "${INIT_RC}.bak" ]; then
     ui_print "  backup created: ${INIT_RC}.bak"
 fi
 
-# 1. 确保 service 定义存在
+# Get services
 if ! grep -q "^service vendor.power_off_alarm " "$INIT_RC"; then
     echo "" >> "$INIT_RC"
     echo "service vendor.power_off_alarm /vendor/bin/power_off_alarm" >> "$INIT_RC"
@@ -68,7 +64,7 @@ else
     ui_print "  service already present, skipped"
 fi
 
-# 2. 确保 on init 触发存在
+# Ensure on init trigger is exist
 if ! grep -q "start vendor.power_off_alarm" "$INIT_RC"; then
     echo "" >> "$INIT_RC"
     echo "on init" >> "$INIT_RC"
