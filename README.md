@@ -11,11 +11,11 @@ The power off alarm clock stores its data in `/persist/alarm/data`,  which conta
 
 ## How to use?
 
-Just install it with `KernelSU`,  `ResukiSU` or other SU manager.
+This project will build two files: one is `PowerOffAlarm_Fix-CRDroid7.1`, which is a module file, and the other is `PowerOffAlarm_REC_Fix-CRDroid7.1`, which is a TWRP installation package. You need to install `PowerOffAlarm_REC_Fix-CRDroid7.1` with TWRP first， Then install `PowerOffAlarm_Fix-CRDroid7.1` with `KernelSU`,  `ResukiSU` or other SU manager.
 
 ## How to Build?
 
-Run `make` to build.
+Run  `make` in the project root directory to build.
 
 ## License
 
